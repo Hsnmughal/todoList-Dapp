@@ -1,10 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import style from './App.module.css';
+import cx from 'classnames';
+import { Header } from './components';
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
+      <header>
+        <Header />
+      </header>
+      <body>
 
+      </body>
     </div>
   );
 }
