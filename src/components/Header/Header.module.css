@@ -1,0 +1,44 @@
+.headerDiv{
+    background-color: #f0f0f0;
+    height: var(--header-height);
+    position: fixed;
+    z-index: var(--z-fixed);
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 1px 28px -16px var(--text-color);
+}
+
+.subDiv{
+    padding: 0.5rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: var(--heading-font);
+    align-items: center;
+}
+
+.logo{
+    font-weight: 600;
+    font-size: var(--h2-font-size);
+}
+
+.secDiv{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.account{
+    font-weight: 400;
+    font-size: var(--normal-font-size);
+    text-align: right;
+}
+
+.avatar{
+    border-radius: 100px;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--text-color);
+}

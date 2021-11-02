@@ -1,5 +1,4 @@
 import style from './App.module.css';
-import cx from 'classnames';
 import { Header } from './components';
 
 function App() {
@@ -8,9 +7,9 @@ function App() {
       <header>
         <Header />
       </header>
-      <body>
+      <div className={style.body}>
 
-      </body>
+      </div>
     </div>
   );
 }
