@@ -1,7 +1,9 @@
 .subDiv {
-    padding: 1rem 10rem;
+    padding: 1rem 7.5rem;
     background-color: rgb(255, 255, 255);
     outline: none;
+    display: flex;
+    justify-content: center;
 }
 
 .input {
