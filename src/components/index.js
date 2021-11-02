@@ -2,3 +2,4 @@
 
 
 export { default as Header} from './Header/Header';
+export {default as InputSection} from './InputSection/InputSection'

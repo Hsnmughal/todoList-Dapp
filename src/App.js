@@ -1,14 +1,12 @@
 import style from './App.module.css';
-import { Header } from './components';
+import { Header, InputSection } from './components';
 
 function App() {
   return (
     <div className={style.App}>
-      <header>
-        <Header />
-      </header>
-      <div className={style.body}>
-
+      <Header />
+      <div className={style.rest}>
+        <InputSection />
       </div>
     </div>
   );
