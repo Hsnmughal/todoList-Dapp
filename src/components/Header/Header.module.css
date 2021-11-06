@@ -37,8 +37,6 @@
 }
 
 .avatar{
-    border-radius: 100px;
-    width: 3rem;
+    width: auto;
     height: 3rem;
-    background-color: var(--text-color);
 }

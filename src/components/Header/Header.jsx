@@ -1,8 +1,10 @@
 import React from 'react';
+import Identicon from 'identicon.js';
 import styles from './Header.module.css';
 import style from '../../App.module.css';
 
-const Header = () => {
+const Header = (props) => {
+    let account = props.account;
     return (
         <div className={styles.headerDiv}>
             <div className={styles.subDiv}>
@@ -14,11 +16,19 @@ const Header = () => {
                 <div className={styles.secDiv}>
                     <span>
                         <p className={styles.account}>
-                            0x1F1F75735a49f5f7e7454B96ff876A2804Ce1438
+                            {account}
                         </p>
                     </span>
-                    <span className={styles.avatar}>
-                    </span>
+                    {account
+                        ? <img
+                            className={styles.avatar}
+                            width='30'
+                            height='30'
+                            src={`data:image/png;base64,${new Identicon(account, 30).toString()}`}
+                            alt=""
+                        />
+                        : <span></span>
+                    }
                 </div>
             </div>
         </div>
