@@ -17,7 +17,7 @@ contract Todo{
     mapping(uint => Task) public task;
     
     function createTask(string memory _content) public {
-        taskCount ++;
         task[taskCount] = Task(taskCount, _content, false);
+        taskCount ++;
     }
 }

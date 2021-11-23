@@ -1,7 +1,6 @@
 import React from 'react';
 import Identicon from 'identicon.js';
 import styles from './Header.module.css';
-import style from '../../App.module.css';
 
 const Header = (props) => {
     let account = props.account;
