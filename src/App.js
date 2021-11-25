@@ -1,4 +1,4 @@
-import React, { useEffect , useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './App.module.css';
 import Todo from './abis/Todo.json';
 import { Header, InputSection } from './components';
@@ -11,7 +11,7 @@ function App() {
   // let [todo, setTodo] = useState('');
   let [contract, setContract] = useState({});
   let [data, setData] = useState({});
-  
+
 
   // FUNCTIONS
   useEffect(() => {
@@ -34,9 +34,10 @@ function App() {
     const contractData = await Todo.networks[networkId];
 
     if (contractData) {
-        const contractCreation = new web3.eth.Contract(Todo.abi, contractData.address);
-        setContract(contract = contractCreation)
-        await console.log(contract);
+      const contractCreation = new web3.eth.Contract(Todo.abi, contractData.address);
+      setContract(contract = contractCreation)
+      console.log( await contractCreation.methods.taskCount().call())
+      await console.log(contract);
     } else {
       console.log('The contract is not deployed to Etherium Network.')
     }
@@ -56,19 +57,22 @@ function App() {
   }
 
   const addTodo = async (todo) => {
-    // await contract.methods.createTask(todo).on('transactionHash', Hash => {
-    //   console.log(Hash)
-    //   window.location.reload();
-    // })
+    try {
+      await contract.methods.createTask(todo).send({from : account}).on('transactionHash', Hash => {
+        console.log(Hash);
+      })
+      // console.log(value.toString())
+      // await console.log(contract.methods.taskCount.toString())
 
-    await console.log(contract.methods.taskCount())
-  
+    } catch (e) {
+      console.log(e)
+    }
   }
 
 
   return (
     <div className={style.App}>
-      <Header account={account}/>
+      <Header account={account} />
       <div className={style.rest}>
         <InputSection addTodo={addTodo} />
       </div>
