@@ -2,4 +2,5 @@
 
 
 export { default as Header} from './Header/Header';
-export {default as InputSection} from './InputSection/InputSection'
+export {default as InputSection} from './InputSection/InputSection';
+export { default as TodoMapTemp } from './TodoMap/TodoMapTemp';

@@ -81,6 +81,7 @@
 
 .rest {
   margin-top: calc(var(--header-height) + 1rem);
+  background-color: none !important;
 }
 
 h1, h2, h3, h4 {

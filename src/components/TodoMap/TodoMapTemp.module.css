@@ -1,0 +1,10 @@
+.headings{
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
+    background-color: var(--header-color) !important;
+}
+
+.sNoheading{
+    font-size: var(--normal-font-size);
+    font-weight: 700;
+}
